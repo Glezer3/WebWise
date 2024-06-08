@@ -1,28 +1,31 @@
 import cron from "node-cron";
 import Sensor from "../models/sensor.model.js";
 
-const updateSensorData = cron.schedule('*/3 * * * *', async () => {
-    try {
+const updateSensorData = cron.schedule("*/3 * * * *", async () => {
+  try {
+    console.log("Automatic data update: START");
 
-        console.log("Automatic data update: START");
+    const currentTime = new Date();
+    const timeLimit = new Date(currentTime.getTime() - 3 * 24 * 60 * 60 * 1000);
 
-        const currentTime = new Date();
-        const timeLimit = new Date(currentTime.getTime() - 3 * 24 * 60 * 60 * 1000);
+    const sensors = await Sensor.find();
 
-        const sensors = await Sensor.find();
+    sensors.forEach(async (sensor) => {
+      let validData = sensor.historyValues.filter(
+        (data) => data.timestamp >= timeLimit
+      );
 
-        sensors.forEach(async (sensor) => {
-            const validData = sensor.historyValues.filter((data) => data.timestamp >= timeLimit);
-            sensor.historyValues = validData;
+      if (validData.length > 50) validData = validData.slice(validData.length - 50);
 
-        await sensor.save();
-        });
+      sensor.historyValues = validData;
 
-        console.log("Automatic data update: COMPLETED");
-        
-    } catch (error) {
-        console.log("Error during updating data: " + error);
-    }
+      await sensor.save();
+    });
+
+    console.log("Automatic data update: COMPLETED");
+  } catch (error) {
+    console.log("Error during updating data: " + error);
+  }
 });
 
 export default updateSensorData;
