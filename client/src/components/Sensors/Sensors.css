@@ -1,0 +1,182 @@
+@import "../../styles.css";
+
+#sensorsHolder {
+    min-height: 100vh;
+    padding: 4rem 1rem;
+}
+
+#errHolder {
+    margin: 0 auto;
+}
+
+#sensorTitle {
+    margin: 1rem 0 3rem 0;
+    text-align: center;
+    font-size: var(--title--font-size);
+    opacity: 0.75;
+}
+
+#sensorShape {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 5rem;
+}
+
+#addSensor {
+    font-size: var(--general--font-size);
+}
+
+#sensorCard {
+    background: var(--black-100, #100d25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.75rem 2rem;
+    gap: 1rem;
+    border-radius: .75rem;
+    z-index: 999;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    min-width: 15rem;
+    max-width: 30rem;
+    max-height: 35rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#sensorCard.editing {
+    cursor: default;
+}
+
+.editing {
+    max-height: fit-content !important;
+}
+
+#sensorCard:focus-visible,
+#sensorCard:hover {
+    transform: scale(1.015, 1.015);
+}
+
+.sensorCardImg {
+    width: 24rem;
+    height: 18rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sensorCardImg > .img {
+    border-radius: .75rem;
+    width: 100%;
+}
+
+.edit {
+    position: absolute;
+    max-width: 2rem;
+    inset: 1rem 1rem auto auto;
+    z-index: 99999;
+    cursor: pointer;
+    transition: filter 0.25s ease-in-out;
+}
+
+.edit:focus-visible,
+.edit:hover {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(100%) saturate(1669%) hue-rotate(178deg) brightness(95%) contrast(100%);
+}
+
+.sensorCardInfo {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.sensorCardInfo  label {
+    padding: .55rem .8rem;
+    font-size: var(--general--font-size, calc(0.97rem + 0.16vw));
+}
+
+.sensorCardInfo input,
+.sensorCardInfo div {
+    background-color: unset;
+    font-size: var(--general--font-size, calc(0.97rem + 0.16vw));
+    color: var(--main--theme--color);
+    padding: .55rem 0;
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 100%;
+    border-bottom: solid var(--tertiary, #151030) var(--hover--border-size);
+    position: relative;
+}
+
+#edit {
+    max-width: 1.75rem;
+    border-bottom: solid var(--tertiary, #151030) var(--hover--border-size);
+    cursor: pointer;
+    padding: 0;
+}
+
+.sensorCardInfo div {
+    color: var(--main--text--color);
+}
+
+.buttonHolder {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    column-gap: 1rem;
+}
+
+#sensorsQuestionModule {
+    color: var(--main--theme--color);
+    font-size: var(--general--font-size);
+}
+
+@media (width <= 1300px) {
+    .sensorCardImg {
+        width: 20rem;
+        height: 16rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (width <= 1000px) {
+    .sensorCardImg {
+        width: 18rem;
+        height: 16rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (width <= 800px) {
+    #sensorShape {
+        column-gap: 2rem;
+    }
+}
+
+@media (width <= 500px) {
+    #sensorCard {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .sensorCardImg {
+        width: 16rem;
+        height: 16rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0.00 0.00 500.00 500.00"
+   id="svg781"
+   sodipodi:docname="eye.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs785" />
+  <sodipodi:namedview
+     id="namedview783"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="1.2133952"
+     inkscape:cx="329.24145"
+     inkscape:cy="330.88972"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg781" />
+  <g
+     id="g1352"
+     transform="matrix(0.23749055,0,0,0.23749055,14.36939,126.18913)">
+    <path
+       fill="#b0b9c2"
+       d="m 966.52,0 h 28.34 q 99.79,2.29 194.63,25.59 c 125,30.69 243.35,84.05 352.69,151.49 132.09,81.47 253.76,181.93 360.71,292.78 q 29.87,30.96 57.75,63.55 a 1.01,1.01 0 0 1 0,1.3 q -31.95,37.26 -66.42,72.51 c -111.8,114.34 -237.78,216.2 -375.43,297.84 -157.83,93.61 -334.51,157.77 -519.39,162.94 h -37.77 q -109.04,-3.19 -214.37,-31.78 C 548.57,982.3 369.34,872.64 212.08,741.4 Q 128.3,671.49 52.87,592.63 25.77,564.29 0.44,534.67 a 0.94,0.93 45.3 0 1 0,-1.21 Q 27.17,502.14 55.81,472.32 175.87,347.35 316.16,245.65 C 456.71,143.77 616.08,60.91 785.75,22.32 Q 875,2.03 966.52,0 Z m 14.03,948.84 A 414.8,405.35 90 0 0 1385.9,534.04 414.8,405.35 90 0 0 980.55,119.24 414.8,405.35 90 0 0 575.2,534.04 414.8,405.35 90 0 0 980.55,948.84 Z"
+       id="path839" />
+    <ellipse
+       fill="#b0b9c2"
+       cx="0"
+       cy="0"
+       transform="rotate(90,223.255,757.295)"
+       rx="194.73"
+       ry="190.33"
+       id="ellipse843" />
+  </g>
+</svg>

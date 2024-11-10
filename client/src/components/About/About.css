@@ -1,0 +1,314 @@
+@import "../../styles.css";
+
+html:has(#testimonialsHolder) {
+    overflow-x: hidden;
+}
+
+section#sectionWrapper {
+    padding: 0% 3% 0% 3% !important;
+}
+
+#servicesHolder {
+    margin-top: 5rem;
+}
+
+#skillsHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    min-height: 20rem;
+}
+
+#skillsBallsHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+}
+
+.skillBalls {
+    max-width: 10rem;
+}
+
+#componentsHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+#infoHolder {
+    margin: 5.5rem 0 -3rem 0;
+    align-self: flex-start;
+}
+
+.componentCardShape {
+    background: "#00cea8";
+    background: var(--green-pink--gradient);
+    background: -webkit-linear-gradient(-90.13deg, var(--main--theme--color) 1.9%, #bf61ff 97.5%);
+    border-radius: 0.7rem;
+    padding: 0.15rem;
+}
+
+.componentCard {
+    background-color: var(--tertiary);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 3.75rem 2.5rem;
+    border-radius: 0.7rem;
+    gap: 5rem;
+    z-index: 999;
+    position: relative;
+    overflow: hidden;
+}
+
+.textFormation {
+    color: var(--secondary-text);
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.textFormation > h3 {
+    font-size: var(--h3--font-size);
+    color: var(--main--text--color);
+    margin-bottom: 0.7rem;
+}
+
+.textFormation > p {
+    font-size: var(--general--font-size);
+    word-wrap: break-word;
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.textFormation > a {
+    font-size: var(--general--font-size);
+    background-color: var(--black-100);
+    max-width: fit-content;
+    align-self: center;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.7rem;
+    border: solid 0.15rem var(--secondary-text);
+    margin-top: 1.75rem;
+    transition: color 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+
+.textFormation > a:hover {
+    color: var(--main--text--color);
+    border: solid 0.15rem var(--main--text--color);
+}
+
+.imgFormation {
+    max-width: 20rem;
+}
+
+.imgFormation > img {
+    border-radius: 0.7rem;
+    height: auto;
+}
+
+.componentsTypeIRTL {
+    flex-direction: row;
+}
+
+.componentsTypeILTR {
+    flex-direction: row-reverse;
+}
+
+#testimonialsHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#testimonialsInfoHolder {
+    margin: 0rem 0 -1rem 0;
+}
+
+#testimonialsShape {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#testimonialCard {
+    background: var(--tertiary);
+    border: solid gray 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    max-width: 35rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 999;
+}
+
+.swiper-wrapper {
+    padding: 3rem 0rem;
+}
+
+#testimonialCardBackground {
+    position: absolute;
+    background: var(--black-100);
+    border-radius: 0.7rem 0.7rem 0 0;
+    width: 100%;
+    height: 22%;
+    top: 0;
+    z-index: -1;
+}
+
+#testimonialCardImgHolder {
+    background: var(--main--background--color);
+    border: solid var(--main--background--color) 0.3rem;
+    border-radius: 50%;
+    margin: 1rem 0 1.5rem 0;
+    min-width: 8rem;
+}
+
+#testimonialCardTextHolder {
+    max-width: 85%;
+    font-size: var(--general--font-size);
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 1rem;
+}
+
+#testimonialCardRatingHolder {
+    font-size: var(--title--font-size);
+    color: yellowgreen;
+    margin-bottom: 2rem;
+}
+
+#testimonialCardAuthorHolder {
+    font-size: var(--general--font-size);
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: center;
+    position: relative;
+}
+
+#testimonialCardAuthorHolder > p:nth-child(2) {
+    font-size: small;
+}
+
+#testimonialCardAuthorHolder > a {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    inset: auto auto 10% -5%;
+}
+
+@media (width <= 1400px) { 
+    #skillsBallsHolder {
+        max-width: 90%;    
+    }
+
+    #testimonialCard {
+        max-width: none;
+    }
+}
+
+@media (width <= 1300px) {
+    #skillsBallsHolder {
+        max-width: none;    
+    }
+
+    .componentCard {
+        padding: 3rem 1.75rem;
+        gap: 3rem;
+    }
+
+    .textFormation {
+        max-width: 30rem;
+    }
+
+    .imgFormation {
+        max-width: 20rem;
+    }
+}
+
+@media (width < 1170px) {
+    #aboutTimeline {
+        margin: 2rem auto;
+        max-width: fit-content;
+    }
+}
+
+@media (width <= 1000px) {
+    .componentCard {
+        gap: 3rem;
+        padding: 3.75rem 2.5rem;
+        flex-direction: column;
+        max-height: 45rem;
+    }
+
+    .componentsTypeIRTL,
+    .componentsTypeILTR {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textFormation {
+        max-width: 35rem;
+    }
+
+    .imgFormation {
+        max-width: 22.5rem;
+    }
+
+    #testimonialCard  {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (width <= 800px) {
+    .componentCard {
+        gap: 2rem;
+        padding: 3rem 1.75rem;
+    }
+
+    .textFormation {
+        max-width: 30rem;
+    }
+
+    .imgFormation {
+        max-width: 20rem;
+    }
+
+    .hover-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+}
+
+@media (width <= 500px) {
+    .skillBalls {
+        max-width: 8rem;
+    }
+
+    .componentCard {
+        gap: 2rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .textFormation {
+        max-width: 30rem;
+    }
+
+    .imgFormation {
+        max-width: 15rem;
+    }
+}

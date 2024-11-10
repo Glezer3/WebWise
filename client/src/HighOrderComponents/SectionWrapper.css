@@ -1,0 +1,23 @@
+#sectionWrapper {
+    padding: 0% 10%;
+    position: relative;
+    z-index: 0;
+}
+
+@media (width <= 1600px) {
+    #sectionWrapper {
+        padding: 0% 8%;
+    }
+}
+
+@media (width <= 1400px) {
+    #sectionWrapper {
+        padding: 0% 6%;
+    }  
+}
+
+@media (width <= 1200px) {
+    #sectionWrapper {
+        padding: 0% 4%;
+    } 
+}

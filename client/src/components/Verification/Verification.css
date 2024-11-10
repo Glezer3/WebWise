@@ -1,0 +1,41 @@
+@import "../../styles.css";
+
+#verSecHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#verSuccess, #verFail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#verSuccess > h1 {
+    color: green;
+}
+
+#verFail {
+    pointer-events: none;
+}
+
+#verFail > h1 {
+    color: red;
+}
+
+#verSuccess > h1, #verFail > h1 {
+    font-size: var(--title--font-size);
+}
+
+#verSuccess > img, #verFail > img {
+    min-width: 15rem;
+}
+
+#verSuccess > button, #verFail > div {
+    font-size: var(--general--font-size);
+    margin-top: 0.75rem;
+}

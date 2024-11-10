@@ -1,0 +1,539 @@
+@import "../../styles.css";
+@import "../../index.css";
+
+#holder {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  gap: 2rem;
+  margin: 0 0% 0 3%;
+}
+
+section#sectionWrapper {
+  padding: 0 3% 0 6%;
+}
+
+.contact_box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#formButton {
+  margin-top: 0.5rem;
+}
+
+#formButton:hover::before {
+  width: 150%;
+  height: 450%;
+}
+
+.button:focus-visible,
+.button:hover {
+  color: var(--main--theme--color);
+}
+
+#holderForm {
+  flex: 1.2;
+  padding: 3.75rem 2.5rem;
+  background: var(--black-100, #100d25);
+  border-radius: 0.75rem;
+  z-index: 999;
+}
+
+#headSubtext {
+  font-size: var(--small--font-size, calc(0.845rem + 0.16vw));
+  color: var(--secondary-text, #aaa6c3);
+  text-align: left;
+  margin: -1.5rem auto -0.35rem auto;
+}
+
+#headTitle {
+  font-size: var(--title--font-size, calc(2.22rem + 0.16vw));
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.holderInput {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1.4rem;
+  width: 49%;
+}
+
+#holderMessage {
+  width: 100%;
+}
+
+.holderInput > input,
+.holderInput > textarea {
+  background-color: var(--tertiary, #151030);
+  font-size: var(--general--font-size, calc(0.97rem + 0.16vw));
+  padding: 0.55rem 0.8rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.holderInput > label {
+  position: absolute;
+  inset: 15% auto auto 0.8rem;
+  color: var(--secondary-text, #aaa6c3);
+  transition: inset 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.holderInput > input:focus-visible ~ label,
+.holderInput > input:valid ~ label {
+  inset: -20% auto auto 0.8rem;
+  color: var(--main--theme--color);
+}
+
+.holderInput > textarea {
+  resize: none;
+  min-height: 13rem;
+}
+
+.holderInput > textarea::placeholder {
+  color: var(--secondary-text, #aaa6c3);
+}
+
+.holderInput > textarea:focus-visible::placeholder {
+  color: var(--main--theme--color);
+}
+
+#holderCanvas {
+  height: 800px;
+  width: 40%;
+}
+
+#timelineElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  background: var(--black-100);
+  border-radius: 100%;
+  position: relative;
+}
+
+#timelineElement > img {
+  width: 55%;
+  object-fit: contain;
+  /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+}
+
+#timelineInfo > h2 {
+  color: var(--main--text--color);
+  font-size: var(--h2--font-size);
+  line-height: 2.5rem;
+  word-break: break-word;
+}
+
+#timelineInfo > p {
+  color: var(--secondary-text);
+  font-size: medium;
+  margin-top: 0;
+}
+
+#timelineList {
+  list-style: disc;
+  margin: 1rem 0rem 0rem 1rem;
+}
+
+#timelineList > li {
+  color: var(--main--text--color);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+#contactHolder {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+  position: relative;
+  gap: 12%;
+}
+
+#contactTimeline {
+  display: flex;
+  max-width: 40rem;
+}
+
+#contactText {
+   width: fit-content;
+   min-width: 25rem;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin: 0 0rem;
+   position: relative;
+}
+
+#contactText > #headHolder {
+  margin-top: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+#textHolder {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10rem;
+  position: relative;
+}
+
+#textHolder > #contactArrowDown {
+  position: absolute;
+  align-self: center;
+  max-width: 5rem;
+  top: 11.5rem;
+}
+
+#contactCardShape {
+  max-width: 40rem;
+  border-radius: .8rem;
+  background: "#00cea8";
+  background: var(--green-pink--gradient);
+  background: -webkit-linear-gradient(-90.13deg, var(--main--theme--color) 1.9%, #bf61ff 97.5%);
+  padding: .1rem;
+}
+
+#contactCard {
+  border-radius: .8rem;
+  padding: 1rem 2rem;
+  background: var(--tertiary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: fit-content;
+}
+
+#contactCard > h3 {
+  text-align: center;
+  color: var(--main--text--color);
+  font-size: var(--h3--font-size);
+  margin-bottom: .25rem;
+}
+
+#contactCard > p {
+  color: var(--main--text--color);
+  font-size: var(--small--font-size);
+  text-align: justify;
+}
+
+#contactBallHolder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  max-width: 40rem;
+}
+
+#contactBalls {
+  width: 9rem;
+  height: 9rem;
+}
+
+@media (width <= 1465px) {
+  #contactBalls {
+    width: 8.3rem;
+    height: 8.3rem;
+  }
+}
+
+@media (width <= 1496px) {
+  #textHolder > #contactArrowDown {
+    top: 12rem;
+  }
+}
+
+@media (width <= 1310px) {
+  #textHolder {
+    row-gap: 8rem;
+  }
+
+  #textHolder > #contactArrowDown {
+    max-width: 4.5rem;
+  }
+
+}
+
+@media (width < 1170px) {
+    #contactHolder {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contactTimeline {
+      max-width: 55rem;
+    }
+
+    #contactText {
+      width: 100%;
+      min-width: none;
+      align-items: center;
+      margin: 0rem 0 3rem 0;
+    }
+
+    #contactCardShape {
+      margin: 0 2rem;
+    }
+
+    #textHolder > #contactArrowDown {
+      top: 10.5rem;
+    }
+
+    #contactText > #headHolder {
+      min-width: 80%;
+    }
+
+    #contactBallHolder {
+      max-width: 50rem;
+    }
+    
+    #contactBalls {
+      width: 9rem;
+      height: 9rem;
+    }
+}
+
+@media (width <= 1500px) {
+  .holderInput {
+    gap: 1.25rem;
+  }
+
+  #holderCanvas {
+    height: 700px;
+  }
+
+  section#sectionWrapper {
+    padding: 0% 3% 0% 6%;
+  }
+}
+
+@media (width <= 1350px) {
+  #holderForm {
+    padding: 3rem 2rem;
+  }
+
+  .contact_box {
+    flex-direction: column;
+  }
+
+  .holderInput {
+    width: 100%;
+  }
+}
+
+@media (width <= 1200px) {
+  #holderForm {
+    padding: 2.5rem 1.5rem;
+  }
+
+  #holderCanvas {
+    height: 600px;
+  }
+}
+
+@media (width <= 1000px) {
+  #holder {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  #holderForm,
+  #holderCanvas {
+    width: 100%;
+  }
+
+  #holderForm {
+    margin-bottom: 10%;
+  }
+
+  .contact_box {
+    flex-direction: row;
+  }
+
+  .holderInput {
+    width: 49%;
+  }
+
+  .holderInput {
+    gap: 1rem;
+  }
+
+  #holderCanvas {
+    margin-bottom: -6.5rem;
+  }
+
+  #textHolder > #contactArrowDown {
+    top: 10rem;
+  }
+
+  #contactText > #headHolder {
+    min-width: 90%;
+  }
+
+  section#sectionWrapper {
+    padding: 0% 10%;
+  }
+}
+
+@media (width <= 800px) {
+  #contactTimeline {
+    max-width: none;
+  }
+}
+
+@media (width <= 750px) {
+  #holderCanvas {
+    height: 500px;
+    margin-bottom: -5.5rem;
+  }
+
+  .contact_box {
+    flex-direction: column;
+  }
+
+  .holderInput {
+    width: 100%;
+  }
+
+  section#sectionWrapper {
+    padding: 0% 7%;
+  }
+}
+
+@media (width <= 700px) {
+  #contactBalls {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (width <= 625px) {
+  #textHolder > #contactArrowDown {
+    top: 8.5rem;
+  }
+}
+
+@media (width <= 571px) {
+  #textHolder > #contactArrowDown {
+    top: 10rem;
+  }
+
+  #timelineInfo > h2 {
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    }
+}
+
+@media (width <= 500px) {
+  #holderForm {
+    padding: 2rem 1rem;
+    margin-bottom: 10%;
+  }
+
+  #headTitle {
+    margin-bottom: 1rem;
+  }
+
+  #holderCanvas {
+    height: 400px;
+    margin-bottom: -5rem;
+  }
+
+  #textHolder > #contactArrowDown {
+    top: 9rem;
+    max-width: 4rem;
+  }
+
+  #contactBalls {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  section#sectionWrapper {
+    padding: 0% 5%;
+  }
+
+  #contactCardShape {
+    max-width: 30rem;
+  }
+
+  #contactCard {
+    padding: .5rem .75rem;
+  }
+
+}
+
+@media (width <= 450px) {
+  #contactHolder {
+    overflow: hidden;
+  }
+  
+  #contactCardShape {
+    max-width: 18rem;
+  }
+
+  #contactText > #headHolder {
+    min-width: 100%;
+    margin-left: 6rem;
+  }
+}
+
+@media (width <= 400px) {
+  #holderCanvas {
+    height: 350px;
+    margin-bottom: -3.75rem;
+  }
+
+  #contactCardShape {
+    max-width: 16rem;
+  }
+
+  #contactText > #headHolder {
+    min-width: 100%;
+    margin-left: 8rem;
+  }
+
+  #textHolder > #contactArrowDown {
+    top: 10.5rem;
+    max-width: 4rem;
+  }
+
+  #contactBallHolder {
+    max-width: 20rem;
+  }
+}
+
+@media (width <= 350px) {
+  #holderCanvas {
+    height: 300px;
+    margin-bottom: -3.5rem;
+  }
+
+  #contactCardShape {
+    max-width: 14rem;
+  }
+
+  #contactText > #headHolder {
+    min-width: 100%;
+    margin-left: 10rem;
+  }
+}

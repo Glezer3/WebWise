@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Poppins-Light";
+    font-weight: 300;
+    src: url(../Poppins/poppins-light-webfont.woff) format("woff"),
+         url(../Poppins/poppins-light-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    font-weight: 400;
+    src: url(../Poppins/poppins-regular-webfont.woff) format("woff"),
+         url(../Poppins/poppins-regular-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    font-weight: 500;
+    src: url(../Poppins/poppins-medium-webfont.woff) format("woff"),
+         url(../Poppins/poppins-medium-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    font-weight: 600;
+    src: url(../Poppins/poppins-semibold-webfont.woff) format("woff"),
+         url(../Poppins/poppins-semibold-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    font-weight: 700;
+    src: url(../Poppins/poppins-bold-webfont.woff) format("woff"),
+         url(../Poppins/poppins-bold-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins-Black";
+    font-weight: 900;
+    src: url(../Poppins/poppins-black-webfont.woff) format("woff"),
+         url(../Poppins/poppins-black-webfont.woff) format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    font-weight: 300;
+    src: url(../Roboto/roboto-light-webfont.woff) format("woff"),
+         url(../Roboto/roboto-light-webfont.woff) format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+    src: url(../Roboto/roboto-regular-webfont.woff) format("woff"),
+         url(../Roboto/roboto-regular-webfont.woff) format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    src: url(../Roboto/roboto-medium-webfont.woff) format("woff"),
+         url(../Roboto/roboto-medium-webfont.woff) format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    src: url(../Roboto/roboto-bold-webfont.woff) format("woff"),
+         url(../Roboto/roboto-bold-webfont.woff) format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto-Black";
+    font-weight: 900;
+    src: url(../Roboto/roboto-black-webfont.woff) format("woff"),
+         url(../Roboto/roboto-black-webfont.woff) format("woff2");
+}

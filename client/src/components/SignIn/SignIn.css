@@ -1,0 +1,203 @@
+@import "../../styles.css";
+#signInHolder {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 7%;
+    overflow: hidden;
+}
+
+html:has(#signInHolder) {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#signInShape {
+    background: var(--black-100, #100d25);
+    width: 40rem;
+    padding: 1.5rem 1.75rem;
+    border-radius: .75rem;
+    z-index: 999;
+    position: relative;
+}
+
+#headSubtext {
+    font-size: var(--small--font-size, calc(0.845rem + 0.16vw));
+    color: var(--secondary-text, #aaa6c3);
+    text-align: left;
+    margin: 0rem auto -0.35rem auto;
+}
+
+#headTitle {
+    font-size: var(--title--font-size, calc(2.22rem + 0.16vw));
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.userInput {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    width: 100%;
+}
+
+.userInput > input,
+.userInput > textarea {
+    background-color: var(--tertiary, #151030);
+    font-size: var(--general--font-size, calc(0.97rem + 0.16vw));
+    padding: .55rem .8rem;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+}
+
+.userInput > label {
+    position: absolute;
+    inset: 15% auto auto .8rem;
+    color: var(--secondary-text, #aaa6c3);
+    font-size: calc(0.85rem + 0.16vw);
+    transition: inset .2s ease-in-out, color .2s ease-in-out;
+}
+
+.userInput > input:focus-visible ~ label,
+.userInput > input:valid ~ label {
+    color: var(--main--theme--color);
+}
+
+#holderPassword > label {
+    top: 12%;
+}
+
+.userInput > input:focus-visible ~ label,
+.userInput > input:valid ~ label {
+    inset: -23% auto auto .8rem;
+    color: var(--main--theme--color);
+}
+
+#holderPassword > input:focus-visible ~ label,
+#holderPassword > input:valid ~ label {
+    top: -18%;
+}
+
+#seePassword img {
+    max-width: 2.5rem;
+    position: absolute;
+    inset: 13% .5rem 13% auto;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    background: var(--tertiary);
+    z-index: 999;
+}
+
+#forgotPassword {
+    margin-top: -2.5rem;
+    margin-left: .25rem;
+}
+
+#forgotPassword a {
+    color: var(--secondary-text);
+    font-size: var(--small--font-size);
+    transition: color .2s ease-in-out;
+}
+
+#forgotPassword a:focus-visible,
+#forgotPassword a:hover {
+    color: var(--main--theme--color);
+}
+
+.button {
+    background: unset;
+    color: var(--main--text--color);
+    padding: .5rem 1rem;
+    border: solid var(--hover--border-size) var(--main--text--color);
+    font-weight: normal;
+    transition: color .35s ease-in-out, font-weight .35s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    border-radius: .7rem;
+    max-width: fit-content;
+    align-self: center;
+    cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--main--text--color);
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+  z-index: -1;
+}
+
+.button:focus-visible::before,
+.button:hover::before {
+  width: 150%;
+  height: 300%;
+}
+
+.button:focus-visible,
+.button:hover {
+    color: var(--black-100);
+    font-weight: bold;
+}
+
+#accountButton {
+    margin: 3rem 0 1rem 0;
+    font-size: var(--general--font-size);
+}
+
+#noAccount {
+    align-self: center;
+}
+
+#noAccount p {
+    color: var(--secondary-text);
+    font-size: var(--small--font-size);
+}
+
+#noAccount p a {
+    color: var(--main--text--color);
+    font-size: calc(var(--small--font-size) + .05rem);
+    transition: color .2s ease-in-out;
+}
+
+#noAccount p a:focus-visible,
+#noAccount p a:hover {
+    color: var(--main--theme--color);
+}
+
+#resend {
+    color: var(--secondary-text);
+    transition: color 250ms ease-in-out;
+    cursor: pointer;
+}
+
+#resend:focus-visible,
+#resend:hover {
+    color: var(--main--text--color);
+}
+
+@media (width <= 1100px) {
+    #signInShape {
+        width: 35rem;
+    }
+}
+
+@media (width <= 600px) {
+    html:has(#signInHolder) {
+        overflow: scroll;
+    }
+    #signInHolder {
+        padding: 30% 2%;
+    }
+    #signInShape {
+        padding: 1rem 1.25rem;
+    }
+}

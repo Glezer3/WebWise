@@ -1,0 +1,291 @@
+@import "./assets/font-styles/Active_Font_Faces/font_faces.css";
+
+:root {
+
+    /* font sizes START ↓↓↓ */
+
+    --title--font-size: clamp(2.25rem, 2.22rem + 0.16vw, 2.47rem);
+    --h1--font-size: clamp(2.25rem, 2.22rem + 0.16vw, 2.47rem);
+    --h2--font-size: clamp(1.75rem, 1.72rem + 0.16vw, 1.97rem);
+    --h3--font-size: clamp(1.25rem, 1.22rem + 0.16vw, 1.47rem);
+    --general--font-size: clamp(1rem, 0.97rem + 0.16vw, 1.22rem);
+    --small--font-size: clamp(0.8rem, 0.8rem + 0.16vw, 1rem);
+
+    /* font sizes END ↑↑↑ */
+
+    /* main colors, theme colors, card background colors and background colors START ↓↓↓ */
+
+    --white-text: hsl(30, 0%, 100%);
+    --dark-text: rgba(1, 1, 1, 1);
+    --secondary-text: #b0b9c2  /*#aaa6c3*/;
+    --tertiary: #161b22   /*#171233*/;
+                --black-100: #0d1117  /*#100d25*/;
+                --black-200: #090325;
+                --white-100: #f3f3f3;
+
+
+    --box-shadow: 0px 35px 120px -15px #211e35;
+
+    --theme-color--1: #bf8bf3;
+    --theme-color--2: #1FC71F;
+    --theme-color--3: #41fffc;
+    --theme-color--4: #FF6666;
+    --theme-color--5: #FF5F15;
+
+    --green-pink--gradient: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+
+    --background-color--1: hsl(0, 0%, 85%, 1);
+    --background-color--2: hsl(252, 30%, 12.5%); /*#000033*/;
+    --background-color--3: #00050a /*#050816*/;
+
+    --card-background-color--1: hsl(50, 10%, 90%);
+    --card-background-color--2: hsl(251, 29%, 26%);
+    --card-background-color--3: hsl(0, 0%, 8%);
+
+    --main--text--color: var(--white-text);
+    --main--theme--color: var(--theme-color--3);
+    --main--background--color: var(--background-color--3);
+    --main--card-background--color: var(--card-background-color--2);
+
+    /* main colors, theme colors, card background colors and background colors END ↑↑↑ */
+
+
+    /* heights, widths and sizes */
+
+    --ham-menu-part--height: clamp(calc(0.25rem), calc(0.25rem), calc(0.5rem));
+    --ham-menu-part--width: clamp(calc(1.5rem), calc(2rem), calc(2.5rem));
+    --ham-menu-part-active--before-after--location: clamp(calc(0.5em), calc(0.635em), calc(1em));
+    --hover--border-size: calc(0.12rem + 1px);
+
+
+    /* animations and transitions START ↓↓↓ */
+
+    --navigation--transition: max-height 1.025s cubic-bezier(0.26, -0.01, 0,  1.01);
+
+    /* animations and transitions END ↑↑↑ */
+
+}
+
+*, *::before, *::after {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-Medium", sans-serif, "Poppins-Regular" !important;
+    max-width: 3000px;
+}
+
+html {
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    background: var(--main--background--color);
+    color: var(--main--text--color);
+    min-width: 300px;
+}
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+body.loading {
+    opacity: 0;
+}  
+
+#stars {
+    position: absolute;
+    inset: 0;
+    z-index: -999;
+    max-height: 100%;
+}
+
+#vertical-line-container {
+    position: fixed;
+    left: 1rem;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: "#00cea8";
+    background: var(--green-pink--gradient);
+    background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+    transition: height 0.3s ease-out;
+}
+
+/* Default Page START ↓↓↓ */
+
+#sectionHero {
+    background-image: url("https://www.altium.com/v2/sites/default/files/2022-09/s-hero-bg--v2_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: calc(100% + 5rem);
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sectionHero::before {
+    content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+}
+
+#heroShape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    z-index: 999;
+    margin-top: 6rem;
+}
+
+#heroText {
+    display: flex;
+    flex-direction: column;
+}
+
+#heroText > h3 {
+    font-size: var(--h3--font-size);
+    color: var(--secondary-text);
+    margin-bottom: 0.25rem;
+}
+
+#heroText > h1 {
+    font-size: var(--h1--font-size);
+    color: white;
+    line-height: 3.25rem;
+}
+
+#heroText > h1 > span {
+    color: var(--main--theme--color);
+}
+
+#heroText > div {
+    font-size: var(--general--font-size);
+    color: var(--secondary-text);
+    margin-top: 0.5rem;
+}
+
+#heroText > a {
+    margin-top: 1.5rem;
+}
+
+#heroImg > img {
+    width: 25rem;
+    animation: upNdown 4s ease-in-out 0s infinite forwards alternate;
+}
+
+@media (width < 1000px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (width < 850px) {
+    html {
+        font-size: 85%;
+    }
+
+}
+
+@media (width < 820px) {
+    #heroText {
+        max-width: 42rem;
+    }
+}
+
+@media (width <= 600px) {
+    #heroText {
+        max-width: 30rem;
+    }
+
+    #heroImg > img {
+        width: 20rem;
+    }
+}
+
+@media (width <= 600px) {
+
+    #heroText > h3 {
+        font-size: var(--general--font-size);
+    }
+
+    #heroText > h1 {
+        font-size: var(--h3--font-size);
+        line-height: 2rem;
+    }
+
+    #heroImg > img {
+        width: 15rem;
+    }
+}
+
+@media (width <= 400px) {
+    #heroText {
+        text-align: center;
+    }
+}
+
+
+@keyframes upNdown {
+    0% {
+        transform: translateY(-0rem);
+    }
+
+    50% {
+        transform: translateY(2rem);
+    }
+
+    100% {
+        transform: translateY(-0rem);
+    }
+}
+
+/* Default Page END ↑↑↑ */
+
+/* Unknown Page START ↓↓↓ */
+
+#unknownHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 2rem;
+}
+
+#unknownErr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 27rem;
+}
+
+#unknown1 {
+    font-size: var(--title--font-size);
+}
+
+#unknown2 {
+    font-size: var(--h1--font-size);
+    margin: -0.25rem 0 0.5rem 0;
+}
+
+#unknown3 {
+    font-size: var(--h3--font-size);
+}
+
+#unknown4 {
+    font-size: var(--general--font-size);
+    margin-top: 1.5rem;
+}
+
+/* Unknown Page END ↑↑↑ */

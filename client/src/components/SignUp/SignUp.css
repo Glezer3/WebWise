@@ -1,0 +1,72 @@
+@import "../../styles.css";
+
+#TaC {
+    margin: -2rem 0 1rem .25rem;
+    color: var(--secondary-text);
+    align-self: flex-start;
+}
+
+#TaC input {
+    cursor: pointer;
+}
+
+#TaC a {
+    color: var(--main--text--color);
+    transition: color .2s ease-in-out;
+}
+
+#TaC a:focus-visible,
+#TaC a:hover {
+    color: var(--main--theme--color);
+}
+
+#holderAccPassword label {
+    inset: 10% auto auto .8rem;
+}
+
+#holderAccPassword > input:focus-visible ~ label,
+#holderAccPassword > input:valid ~ label {
+    inset: -18% auto auto .8rem
+}
+
+#holderAccPassword #seePassword img {
+    inset: 11% .5rem 11% auto
+}
+
+#createAccountButton {
+    margin: 2rem 0 1rem 0;
+}
+
+#accountBox {
+    display: flex;
+    gap: .75rem;
+}
+
+#errorHolder {
+    text-align: center;
+    color: var(--main--theme--color);
+}
+
+@media (width <= 700px) {
+    #signInShape * .userInput > input:focus-visible ~ label,
+    #signInShape * .userInput > input:valid ~ label {
+    inset: -21.5% auto auto .8rem;
+    color: var(--main--theme--color);
+    }
+
+    #holderAccPassword > input:focus-visible ~ label,
+    #holderAccPassword > input:valid ~ label {
+    inset: -13% auto auto .8rem !important;
+    }
+}
+
+@media (width <= 500px) {
+    #TaC {
+        min-width: 100%;
+    }
+
+    #accountBox {
+        flex-direction: column;
+        gap: 0;
+    }
+}

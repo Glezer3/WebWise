@@ -1,0 +1,159 @@
+@import "../../styles.css";
+
+section#sectionWrapper:has(#homeShape) {
+    padding: 0 !important;
+  }
+
+#homeHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    gap: 3rem;
+}
+
+#homeTop {
+    height: 7rem;
+}
+
+#homeLine {
+    background: var(--tertiary);
+    width: 100%;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
+    padding: 0 4rem;
+}
+
+#homeText {
+    max-width: 27rem;
+}
+
+#homeText > .homeTitle {
+    font-size: var(--h1--font-size);
+    color: var(--main--theme--color);
+}
+
+.homeInfo {
+    font-size: var(--general--font-size);
+}
+
+.homeInfo > .infoText {
+    margin-top: 0.5rem;
+}
+
+#homeLogo {
+    max-width: 17.5rem;
+}
+
+#homeProjectsHolder {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    padding: 0 3rem;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+}
+
+#homeProjects > .homeProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 17rem;
+}
+
+.homeProject > .projectImg {
+    width: 100%;
+    background: var(--tertiary);
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImg > img {
+    max-width: 5rem;
+}
+
+.homeProject > .projectText {
+    font-size: var(--general--font-size);
+    background: var(--tertiary);
+    padding: 0.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 20rem;
+}
+
+.projectText > .projectTitle {
+    margin-bottom: 0.5rem;
+    color: var(--main--theme--color);
+}
+
+.projectText > .projectDescription {
+    list-style-type: disc;
+    font-size: var(--small--font-size);
+    align-self: start;
+}
+
+.projectDescription > li {
+    margin-bottom: 0.25rem;
+}
+
+@media (width <= 1100px) {
+    #homeLogo {
+        max-width: 15rem;
+    }
+}
+
+@media (width <= 770px) {
+    #homeLine {
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
+    #homeLogo {
+        max-width: 12rem;
+    }
+}
+
+@media (width <= 650px) {
+    #homeLine {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    #homeText {
+        max-width: 35rem;
+    }
+
+    #homeLogo {
+        max-width: 10rem;
+    }
+}
+
+@media (width <= 600px) {
+    #homeText {
+        max-width: 30rem;
+    }
+}
+
+@media (width <= 470px) {
+    #homeText {
+        max-width: 25rem;
+    }
+    
+    #homeLogo {
+        max-width: 7rem;
+    }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0.00 0.00 500.00 500.00"
+   id="svg781"
+   sodipodi:docname="crossed_eye.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs785" />
+  <sodipodi:namedview
+     id="namedview783"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="1.2133952"
+     inkscape:cx="329.24145"
+     inkscape:cy="330.88972"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg781" />
+  <g
+     id="g1359">
+    <rect
+       fill="#b0b9c2"
+       x="-247.73"
+       y="-13.20"
+       transform="translate(250.00,250.00) rotate(38.1)"
+       width="495.46"
+       height="26.40"
+       rx="0.57"
+       id="rect771" />
+    <path
+       fill="#b0b9c2"
+       d="   M 172.22 132.07   C 287.40 95.13 410.34 143.78 469.25 249.04   A 1.53 1.52 -45.3 0 1 469.25 250.55   Q 442.04 299.26 397.03 332.17   Q 396.35 332.67 395.64 332.11   L 340.04 288.44   A 0.75 0.75 0.0 0 1 339.81 287.57   C 357.46 244.42 343.41 195.66 305.09 169.42   C 270.53 145.77 225.99 146.79 191.96 171.53   Q 191.56 171.82 191.22 171.56   L 151.54 140.44   A 0.46 0.45 -36.5 0 1 151.66 139.66   C 158.49 137.11 165.72 134.16 172.22 132.07   Z"
+       id="path773" />
+    <path
+       fill="#b0b9c2"
+       d="   M 163.10 293.83   C 190.47 347.52 258.60 363.86 307.79 328.31   Q 308.23 327.99 308.65 328.32   L 347.93 359.14   Q 348.77 359.80 347.77 360.17   C 340.35 362.96 332.65 366.04 325.62 368.23   C 210.95 404.03 88.93 354.79 30.67 250.45   A 1.26 1.26 0.0 0 1 30.67 249.21   C 48.50 217.06 73.23 189.03 103.05 167.40   A 0.60 0.60 0.0 0 1 103.77 167.42   L 159.80 211.43   Q 160.21 211.75 160.01 212.23   C 149.21 239.06 150.02 268.16 163.10 293.83   Z"
+       id="path775" />
+    <path
+       fill="#b0b9c2"
+       d="   M 221.97 194.66   C 268.71 170.55 322.08 212.82 310.32 263.86   Q 310.08 264.92 309.22 264.25   L 221.87 195.64   Q 221.16 195.08 221.97 194.66   Z"
+       id="path777" />
+    <path
+       fill="#b0b9c2"
+       d="   M 278.00 305.16   C 229.82 327.72 178.71 287.81 189.56 235.56   A 0.43 0.32 -68.5 0 1 190.10 235.22   L 278.10 304.33   Q 278.73 304.82 278.00 305.16   Z"
+       id="path779" />
+  </g>
+</svg>

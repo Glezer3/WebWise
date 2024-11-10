@@ -1,0 +1,99 @@
+@import "../../styles.css";
+
+#signInShape > h1 {
+    letter-spacing: 0.1rem;
+}
+
+#profileForm,
+#profileFormActive {
+    display: flex;
+    flex-direction: column;
+}
+
+#profileFormActive input,
+#profileFormActive img {
+    pointer-events: none;
+}
+
+.imgUploadInfo {
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+#profileForm > img,
+#profileFormActive > img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+    margin: -1rem 0 0.5rem 0;
+}
+
+#profileSettings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-text);
+    font-size: var(--small--font-size);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+    z-index: 99;
+}
+
+#confirmChangeHolder {
+    z-index: 999999;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .75rem;
+}
+
+#confirmChangeShape {
+    background: var(--black-100, #100d25);
+    position: absolute;
+    inset: 50% 0 auto 0;
+    margin: 0 auto;
+    transform: translate(0%, -50%);
+    max-width: fit-content;
+    padding: 1.5rem 1.75rem;
+    border-radius: .75rem;
+    text-align: center;
+}
+
+#confirmChange {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+#profileSettings > span {
+    transition: color 250ms ease-in-out;
+}
+
+#profileSettings > span:focus-visible,
+#profileSettings > span:hover {
+    color: var(--main--theme--color);
+}
+
+@media (width <= 1000px) {
+    #profileForm > img,
+    #profileFormActive > img {
+    width: 8rem;
+    height: 8rem;
+    }
+}
+
+
+@media (width <= 600px) {
+    #confirmChangeShape {
+        padding: 1rem 1.25rem;;
+    }
+}

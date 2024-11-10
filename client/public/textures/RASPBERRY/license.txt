@@ -1,0 +1,11 @@
+Model Information:
+* title:	Raspberry Pi 4 Compute Module (CM4)
+* source:	https://sketchfab.com/3d-models/raspberry-pi-4-compute-module-cm4-272a7060c84a430ba494b325f56d80f1
+* author:	HunterVacui (https://sketchfab.com/HunterVacui)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Raspberry Pi 4 Compute Module (CM4)" (https://sketchfab.com/3d-models/raspberry-pi-4-compute-module-cm4-272a7060c84a430ba494b325f56d80f1) by HunterVacui (https://sketchfab.com/HunterVacui) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
