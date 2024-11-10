@@ -10,17 +10,22 @@ const updateSensorData = cron.schedule("*/3 * * * *", async () => {
 
     const sensors = await Sensor.find();
 
-    sensors.forEach(async (sensor) => {
+    for (const sensor of sensors) {
       let validData = sensor.historyValues.filter(
         (data) => data.timestamp >= timeLimit
       );
 
-      if (validData.length > 50) validData = validData.slice(validData.length - 50);
+      if (validData.length > 50) {
+        validData = validData.slice(validData.length - 50);
+      }
 
-      sensor.historyValues = validData;
-
-      await sensor.save();
-    });
+      await Sensor.updateOne(
+        { _id: sensor._id },
+        { $set: { historyValues: validData } },
+        { runValidators: false }
+      );
+      
+    }
 
     console.log("Automatic data update: COMPLETED");
   } catch (error) {

@@ -33,37 +33,9 @@ const sensorSchema = new mongoose.Schema({
         default: Date.now,
     },
 
-    ammonia: { // (NH3)
+    carbon_monoxide: { //CO2 - ppm
         type: Number,
-    }, // - MQ-135
-
-    benzene: { // (C6H6)
-        type: Number,
-    }, // - MQ-135
-
-    methane: { // (CH4)
-        type: Number, 
-    }, // - MQ-2
-
-    propane: { // (C3H8)
-        type: Number,
-    }, // - MQ-2
-
-    bhutan: { // (C4H10)
-        type: Number,
-    }, // - MQ-2
-
-    carbon_monoxide: { // CO2
-        type: Number,
-    }, // - MQ-135
-
-    smoke: {
-        type: Number,
-    }, // - MQ-2
-
-    air_quality: {
-        type: Number,
-    }, // - MQ-135
+    },
 
     temperature: {
         type: Number,
@@ -73,24 +45,82 @@ const sensorSchema = new mongoose.Schema({
         type: Number,
     },
 
+    atmospheric_pressure: {
+        type: Number,
+    },
+
+    typical_particle_size: { //µm
+        type: Number,
+    },
+
+    light: {
+        type: Object,
+        values: {
+            intensity: { type: Number },
+            rawALS: { type: Number },
+            rawWhite: { type: Number },
+        },
+    },
+
+    particulate_matter: { //PM - µg/m³
+        type: Object,
+        values: {
+            PM1_0: { type: Number },
+            PM2_5: { type: Number },
+            PM4_0: { type: Number },
+            PM10_0: { type: Number },
+        },
+    },
+
+    number_concentration: { //NC - particles/cm³
+        type: Object,
+        values: {
+            NC0_5: { type: Number },
+            NC1_0: { type: Number },
+            NC2_5: { type: Number },
+            NC4_0: { type: Number },
+            NC10_0: { type: Number },
+        },
+    },
+
     historyValues: [{
         timestamp: {
             type: Date,
             required: true,
         },
-    
-        ammonia: { type: Number },
-        benzene: { type: Number },
-        methane: { type: Number },
-        propane: { type: Number },
-        bhutan: { type: Number },
         carbon_monoxide: { type: Number },
-        smoke: { type: Number },
-        air_quality: { type: Number },
         temperature: { type: Number },
         humidity: { type: Number },
+        atmospheric_pressure: { type: Number },
+        typical_particle_size: { type: Number, },
+        light: {
+            type: Object,
+            values: {
+                intensity: { type: Number },
+                rawALS: { type: Number },
+                rawWhite: { type: Number },
+            },
+        },
+        particulate_matter: {
+            type: Object,
+            values: {
+                PM1_0: { type: Number },
+                PM2_5: { type: Number },
+                PM4_0: { type: Number },
+                PM10_0: { type: Number },
+            },
+        },
+        number_concentration: {
+            type: Object,
+            values: {
+                NC0_5: { type: Number },
+                NC1_0: { type: Number },
+                NC2_5: { type: Number },
+                NC4_0: { type: Number },
+                NC10_0: { type: Number },
+            },
+        },
     }],
-
 }, {timestamps: true});
 
 const Sensor = mongoose.model("Sensor", sensorSchema);
