@@ -295,20 +295,7 @@ section#sectionWrapper {
 }
 
 @media (width <= 500px) {
-    .skillBalls {
-        max-width: 8rem;
-    }
-
-    .componentCard {
-        gap: 2rem;
-        padding: 1.5rem 1.25rem;
-    }
-
-    .textFormation {
-        max-width: 30rem;
-    }
-
-    .imgFormation {
-        max-width: 15rem;
+    #skillsHolder {
+        display: none;
     }
 }

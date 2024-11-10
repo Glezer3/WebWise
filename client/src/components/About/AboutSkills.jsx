@@ -11,7 +11,7 @@ const Skills = () => {
             <div id="skillsBallsHolder">
             {skillBall.map((skillBall, index) => (
               <motion.div className="skillBalls" key={skillBall.name + index} variants={fadeIn("right", "spring", index * 0.2, 0.5)}>
-                <BallCanvas icon={skillBall.icon} />
+                <BallCanvas id="skillBall" icon={skillBall.icon} />
               </motion.div>
             ))}
             </div>
