@@ -79,19 +79,19 @@ const socialMedias = [
     id: "facebook",
     title: "Facebook",
     icon: facebook,
-    url: "",
+    url: "https://www.facebook.com/messages",
   },
   {
     id: "instagram",
     title: "Instagram",
     icon: instagram,
-    url: "",
+    url: "https://www.instagram.com/direct/inbox/",
   },
   {
     id: "discord",
     title: "Discord",
     icon: discord,
-    url: "",
+    url: "https://discord.com/channels/@me",
   },
 ];
 
