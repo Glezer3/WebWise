@@ -226,10 +226,28 @@
   };
 
   export const forgotPassword = async (req, res, next) => {
-    const { email } = req.body;
+    const { email, captchaToken } = req.body;
     const { resend } = req.query;
 
+    if (!captchaToken) {
+      return next(errorHandler(400, "CAPTCHA is required"));
+    }
+
     try {
+      
+      const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+      const captchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${secretKey}&response=${captchaToken}`,
+      });
+
+      const captchaData = await captchaRes.json();
+
+      if (!captchaData.success) {
+        return next(errorHandler(400, "CAPTCHA validation failed"));
+      }
+
       const validUser = await User.findOne({ email: email });
       if (!validUser) return next(errorHandler(404, "User not found!"));
       if (!validUser.verified)
