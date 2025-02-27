@@ -10,6 +10,7 @@ const ForgotPassword = () => {
   const [loading, setLoading] = useState(false);
   const [resendTimer, setResendTimer] = useState(0);
   const [captchaToken, setCaptchaToken] = useState(null);
+  const [captchaKey, setCaptchaKey] = useState(Date.now());
 
   const [form, setForm] = useState({
     email: "",
@@ -30,11 +31,6 @@ const ForgotPassword = () => {
   const handleCAPTCHAChange = (token) => {
     console.log("reCAPTCHA token:", token);
     setCaptchaToken(token);
-  };
-
-  const resetCaptcha = () => {
-    recaptchaRef.current?.reset();
-    setCaptchaToken(null);
   };
 
   const handleSubmit = async (e) => {
@@ -66,13 +62,15 @@ const ForgotPassword = () => {
       } else {
         setError("An email was sent");
         setForm({ email: "" });
-        resetCaptcha();
       }
     } catch (error) {
       console.error(error);
       setError("An error occurred. Please try again.");
     } finally {
       setWaiting(false);
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
+      setCaptchaKey(Date.now());
     }
   };
 
@@ -101,7 +99,6 @@ const ForgotPassword = () => {
       setLoading(true);
       setResendTimer(30);
       setError("The email has been resent");
-      resetCaptcha();
 
     } catch (error) {
       console.error(error);
@@ -180,8 +177,10 @@ const ForgotPassword = () => {
           </div>
           <div id="CAPTCHA">
             <ReCAPTCHA
+              key={captchaKey}
               sitekey="6LdJmeQqAAAAABmkzVi1osjIklwjWRzaBxYfX5DF"
               onChange={handleCAPTCHAChange}
+              ref={recaptchaRef}
               required
             />
           </div>
