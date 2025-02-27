@@ -32,6 +32,11 @@ const ForgotPassword = () => {
     setCaptchaToken(token);
   };
 
+  const resetCaptcha = () => {
+    recaptchaRef.current?.reset();
+    setCaptchaToken(null);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -61,14 +66,13 @@ const ForgotPassword = () => {
       } else {
         setError("An email was sent");
         setForm({ email: "" });
+        resetCaptcha();
       }
     } catch (error) {
       console.error(error);
       setError("An error occurred. Please try again.");
     } finally {
       setWaiting(false);
-      recaptchaRef.current?.reset();
-      setCaptchaToken(null);
     }
   };
 
@@ -97,6 +101,7 @@ const ForgotPassword = () => {
       setLoading(true);
       setResendTimer(30);
       setError("The email has been resent");
+      resetCaptcha();
 
     } catch (error) {
       console.error(error);
