@@ -100,6 +100,10 @@ const ForgotPassword = () => {
       setResendTimer(30);
       setError("The email has been resent");
 
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
+      setCaptchaKey(Date.now());
+
     } catch (error) {
       console.error(error);
       setError("An error occurred while resending the email.");
