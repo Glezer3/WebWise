@@ -168,7 +168,7 @@ const ForgotPassword = () => {
           </div>
           <div id="CAPTCHA">
             <ReCAPTCHA
-              sitekey="6LcVluQqAAAAAB6qOwPdQjYbCT1Vz0Gp3FHnGhxH"
+              sitekey="6LdJmeQqAAAAABmkzVi1osjIklwjWRzaBxYfX5DF"
               onChange={handleCAPTCHAChange}
               required
             />

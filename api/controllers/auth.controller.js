@@ -234,8 +234,8 @@
     }
 
     try {
-      
-      const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+      const secretKey = "6LdJmeQqAAAAAK64ZO3_kwLXIeIlJ7PN5LYzqAO8";
       const captchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
