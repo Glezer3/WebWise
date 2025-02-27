@@ -29,7 +29,6 @@ const ForgotPassword = () => {
   };
 
   const handleCAPTCHAChange = (token) => {
-    console.log("reCAPTCHA token:", token);
     setCaptchaToken(token);
   };
 
