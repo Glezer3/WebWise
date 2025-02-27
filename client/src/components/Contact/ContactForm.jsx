@@ -18,7 +18,7 @@ const Form = () => {
     subject: "",
     message: "",
   });
-console.log(currentUser)
+
   const formRef = useRef();
 
   const [waititng, setWaiting] = useState(false);

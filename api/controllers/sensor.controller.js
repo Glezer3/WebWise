@@ -52,7 +52,9 @@ export const sensorData = async (req, res, next) => {
 
   try {
     const sensor = await Sensor.findOne({ sensorId: sensorId });
-    if (!sensor) res.status(404).json({ success: false, message: "Sensor not found" });
+    if (!sensor) {
+      return res.status(404).json({ success: false, message: "Sensor not found" });
+    }
 
     await Sensor.findByIdAndUpdate(
       sensor._id,

@@ -17,7 +17,7 @@ export const sendEmail = async (option) => {
   });
 
   const emailOptions = {
-    from: "WebWiseSupport@webwise.com",
+    from: "help.webwise@gmail.com",
     to: option.email,
     subject: option.subject,
     text: option.message,
