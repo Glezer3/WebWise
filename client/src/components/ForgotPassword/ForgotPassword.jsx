@@ -28,6 +28,7 @@ const ForgotPassword = () => {
   };
 
   const handleCAPTCHAChange = (token) => {
+    console.log("reCAPTCHA token:", token);
     setCaptchaToken(token);
   };
 
@@ -48,7 +49,10 @@ const ForgotPassword = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          email: form.email,
+          captchaToken: captchaToken,
+        }),
       });
       const data = await res.json();
 
@@ -78,7 +82,10 @@ const ForgotPassword = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          email: form.email,
+          captchaToken: captchaToken,
+        }),
       });
       const data = await res.json();
 
